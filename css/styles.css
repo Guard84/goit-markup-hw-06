@@ -284,6 +284,10 @@ img {
 	max-width: 320px;
 }
 
+.our-team-container {
+	padding: 0 28px;
+}
+
 .list-team {
 	background-color: var(--white-background);
 	border-radius: 0px 0px 4px 4px;
