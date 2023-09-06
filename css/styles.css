@@ -233,6 +233,11 @@ img {
 	overflow: hidden;
 }
 
+.advantages-section {
+	margin: 0 auto;
+	max-width: 320px;
+}
+
 .card-item {
 	display: inline-flex;
 	flex-direction: column;
@@ -276,6 +281,7 @@ img {
 .our-team {
 	background-color: var(--light-cloud);
 	margin: 0 auto;
+	max-width: 320px;
 }
 
 .list-team {
@@ -340,6 +346,11 @@ img {
 }
 
 /* портфоліо */
+
+.portfolio-section {
+	margin: 0 auto;
+	max-width: 320px;
+}
 
 .card-portfolio {
 	display: flex;
@@ -425,12 +436,10 @@ img {
 
 .studio-logo-footer {
 	color: var(--light-cloud);
-	text-align: center;
 }
 
 .footer-logo {
 	display: inline-block;
-	/* margin-bottom: 17px; */
 	color: var(--primary-brand-iris);
 	font-family: "Raleway", sans-serif;
 	font-size: 18px;
