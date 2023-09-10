@@ -57,6 +57,12 @@ img {
 	margin-right: auto;
 }
 
+@media (min-width: 768px) {
+	.container {
+		width: 768px;
+	}
+}
+
 .section {
 	padding-top: 96px;
 	padding-bottom: 96px;
@@ -85,17 +91,63 @@ img {
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.mobile-button-menu {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+@media (min-width: 768px) {
+	.page-header {
+		max-width: 768px;
+		height: 72px;
+		margin: 0 auto;
+		border-bottom: 1px solid var(--accent-cornflower);
+		box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+			0px 1px 6px rgba(46, 47, 66, 0.08);
+	}
 }
 
-.icon-mobile-menu {
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(244, 244, 253, 1);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.mobile-menu.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.mobile-button-menu {
 	position: absolute;
 	right: 16px;
 	top: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.icon-mobile-menu {
 	fill: rgba(47, 47, 55, 1);
+}
+
+@media (min-width: 768px) {
+	.mobile-button-menu {
+		display: none;
+	}
+
+	.icon-mobile-menu {
+		display: none;
+	}
 }
 
 .page-header .container {
@@ -105,16 +157,18 @@ img {
 	align-items: center;
 }
 
-/* .header-nav {
-	display: flex;
-	align-items: center;
-} */
+@media (min-width: 768px) {
+	.header-nav {
+		display: flex;
+		align-items: center;
+	}
 
-/* .page-nav {
-	display: flex;
-	gap: 40px;
-	align-items: center;
-} */
+	.page-nav {
+		display: flex;
+		gap: 40px;
+		align-items: center;
+	}
+}
 
 .web-logo {
 	color: var(--primary-brand-iris);
@@ -150,7 +204,7 @@ img {
 	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current::after {
+/* .current::after {
 	display: block;
 	position: absolute;
 	left: 0;
@@ -161,7 +215,7 @@ img {
 	border-radius: 2px;
 	background-color: var(--pressed-state-ocean);
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .page-link:hover,
 .page-link:focus {
@@ -603,6 +657,15 @@ img {
 	height: 100%;
 	background-color: rgba(46, 47, 66, 0.4);
 	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.backdrop.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
 }
 
 .div-form-hero {
@@ -805,6 +868,5 @@ img {
 .form-button:focus {
 	background-color: var(--pressed-state-ocean);
 }
-
 
 /* BURGER-MENU */
