@@ -332,11 +332,11 @@ img {
 	margin: 0 auto;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
 	.advantages-section {
 		width: 768px; 
 	 }
-} */
+}
 
 .card-item {
 	display: flex;
@@ -353,7 +353,7 @@ img {
 	}
 
 	.list-item {
-		flex-basis: calc((100% - 24px) / 2);
+		width: calc((100% - 24px) / 2);
 	}
 }
 
