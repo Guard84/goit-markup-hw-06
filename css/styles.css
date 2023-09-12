@@ -60,6 +60,7 @@ img {
 @media (min-width: 768px) {
 	.container {
 		width: 768px;
+		margin: 0 auto;
 	}
 }
 
@@ -261,7 +262,6 @@ img {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	/* max-width: 320px; */
 	margin: 0 auto;
 	position: relative;
 }
@@ -398,10 +398,6 @@ img {
 
 .our-team {
 	background-color: var(--light-cloud);
-}
-
-.our-team-container {
-	margin: 0 auto;
 }
 
 @media (min-width: 768px) {
