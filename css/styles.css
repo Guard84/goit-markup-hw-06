@@ -104,6 +104,13 @@ img {
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
+.page-header .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
 @media (min-width: 768px) {
 	.page-header {
 		border-bottom: 1px solid var(--accent-cornflower);
@@ -162,13 +169,6 @@ img {
 	}
 }
 
-.page-header .container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
 .address {
 	display: none;
 }
@@ -178,14 +178,26 @@ img {
 }
 
 @media (min-width: 768px) {
+	.header-nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.div-logo {
+		margin-right: 120px;
+	}
+
 	.page-nav {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		gap: 40px;
 	}
 
 	.address {
+		display: block;
+	}
+
+	.page-nav-address {
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
@@ -195,10 +207,16 @@ img {
 }
 
 @media (min-width: 1158px) {
-	.address {
+	.header-nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.page-nav-address {
 		flex-direction: row;
-		justify-content: center;
+		align-items: center;
 		font-style: normal;
+		gap: 40px;
 	}
 }
 
@@ -211,6 +229,16 @@ img {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 }
+
+@media (min-width: 1158px) {
+	.web-logo {
+		padding: 24px 0;
+	}
+	.div-logo {
+		margin-right: 76px;
+	}
+}
+
 .studio-logo {
 	color: var(--dark-navy-blue);
 }
@@ -390,7 +418,7 @@ img {
 	}
 
 	.list-item {
-		width: calc((100% - 24px) / 2);
+		flex-basis: calc((100% - 24px) / 2);
 	}
 }
 
@@ -678,6 +706,7 @@ img {
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	margin-top: 17px;
+	width: 288px;
 }
 
 @media (min-width: 768px) {
@@ -690,20 +719,12 @@ img {
 	background-color: var(--dark-navy-blue);
 	padding-top: 96px;
 	padding-bottom: 96px;
-	max-width: 320px;
 	margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-	.footer-color {
-		min-width: 768px;
-	}
 }
 
 @media (min-width: 1158px) {
 	.footer-color {
 		padding: 100px 0;
-		min-width: 1158px;
 	}
 }
 
